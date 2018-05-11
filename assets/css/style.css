@@ -1,8 +1,12 @@
 body{
-    background-image: url("../images/sky.png")
+    background-image: url("../images/sky.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-attachment: fixed;
 }
 .jumbotron {
-background-color: black;
+background-color: rgba(0, 0, 0, .7);
 color: white;
 font-family: 'Lobster', cursive;
 }
