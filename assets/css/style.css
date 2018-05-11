@@ -12,17 +12,17 @@ color: white;
 font-family: 'Lobster', cursive;
 }
 .card-header{
-    background-color: whitesmoke;
-    color: black;
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+    }
 
+.card {
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
 }
-.card-body{
-    background-color:whitesmoke;
-}
-
 
 .card-text{
-color:black;
+color:white;
 }
 .startbutton{
     width: 1000px;
