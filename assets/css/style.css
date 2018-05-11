@@ -1,0 +1,23 @@
+body{
+    background-image: url("../images/sky.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+    background-attachment: fixed;
+}
+.jumbotron {
+background-color: rgba(0, 0, 0, .7);
+color: white;
+font-family: 'Lobster', cursive;
+}
+.card-header{
+    background-color: black;
+    color: white;
+
+}
+.card-body{
+    background-color: black;
+}
+.card-text{
+color: white;
+}
