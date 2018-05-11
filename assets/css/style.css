@@ -1,0 +1,19 @@
+body{
+    background-image: url("../images/sky.png")
+}
+.jumbotron {
+background-color: black;
+color: white;
+font-family: 'Lobster', cursive;
+}
+.card-header{
+    background-color: black;
+    color: white;
+
+}
+.card-body{
+    background-color: black;
+}
+.card-text{
+color: white;
+}
