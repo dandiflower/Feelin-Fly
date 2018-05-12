@@ -24,27 +24,28 @@ font-family: 'Lobster', cursive;
 .card-text{
 color:white;
 }
-.startbutton{
+.startbox{
     width: 1000px;
     margin-top: 10%;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto
 }
 .card-title{
     color: white;
 }
 
-}
-/* #####workinganimation######
-/* /* .startbutton{ */
-    /* margin-left: 5%;
+/* this is a class that should be added when the submit button is clicked. it will slide the box to the left out of the screen */
+ .slideout{
+     margin-left: auto;
+     margin-right: auto;
     -webkit-animation-name: slideOutLeft;  
     -webkit-animation-duration: 3s;      
     -webkit-animation-fill-mode: both; 
     animation-name: slideOutLeft;
     animation-duration: 1s;    
-    animation-fill-mode: both; */ */
+    animation-fill-mode: both;
+ }
 
-} */
 @-webkit-keyframes slideOutLeft {
     from {
       -webkit-transform: translate3d(0, 0, 0);
