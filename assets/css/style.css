@@ -4,6 +4,7 @@ body{
     background-size: cover;
     background-position: 50% 0%;
     background-attachment: fixed;
+    background-color: #bbeff7;
 }
 .jumbotron {
 background-color: rgba(0, 0, 0, .7);
@@ -11,13 +12,64 @@ color: white;
 font-family: 'Lobster', cursive;
 }
 .card-header{
-    background-color: black;
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+    }
+
+.card {
+    background-color:rgba(0, 0, 0, 0.7);
     color: white;
+}
+
+.card-text{
+color:white;
+}
+.startbutton{
+    width: 1000px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.card-title{
+    color: white;
+}
 
 }
-.card-body{
-    background-color: black;
-}
-.card-text{
-color: white;
-}
+/* #####workinganimation######
+/* /* .startbutton{ */
+    /* margin-left: 5%;
+    -webkit-animation-name: slideOutLeft;  
+    -webkit-animation-duration: 3s;      
+    -webkit-animation-fill-mode: both; 
+    animation-name: slideOutLeft;
+    animation-duration: 1s;    
+    animation-fill-mode: both; */ */
+
+} */
+@-webkit-keyframes slideOutLeft {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
+
+    }
+  }
