@@ -4,6 +4,7 @@ body{
     background-size: cover;
     background-position: 50% 0%;
     background-attachment: fixed;
+    background-color: #bbeff7;
 }
 .jumbotron {
 background-color: rgba(0, 0, 0, .7);
@@ -11,13 +12,111 @@ color: white;
 font-family: 'Lobster', cursive;
 }
 .card-header{
-    background-color: black;
-    color: white;
+    background-color:rgba(0, 0, 0, 0.7);
+    color:white;
+    }
 
+.card {
+    background-color:rgba(0, 0, 0, 0.7);
+    color: white;
 }
-.card-body{
-    background-color: black;
-}
+
 .card-text{
-color: white;
+color:white;
 }
+.startbox{
+    width: 1000px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto
+}
+.card-title{
+    color: white;
+}
+
+#reddit-prompt {
+    text-align: center;
+}
+
+#submit-button {
+    margin-left: 45%;
+}
+
+/* this is a class that should be added to the intor box when #startbutton is clicked. it will slide the intro box to the left out of the screen */
+ .slideout{
+     margin-left: auto;
+     margin-right: auto;
+    -webkit-animation-name: slideOutLeft;  
+    -webkit-animation-duration: 2s;      
+    -webkit-animation-fill-mode: both; 
+    animation-name: slideOutLeft;
+    animation-duration: 1s;    
+    animation-fill-mode: both;
+ }
+
+@-webkit-keyframes slideOutLeft {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
+
+    }
+  }
+
+  /* this is a class that should be added to the prompt box when the #submit-button is clicked. it will slide the prompt box onto the screen from the right */
+  .slidein{
+    margin-left: auto;
+    margin-right: auto;
+   -webkit-animation-name: slideInRight;  
+   -webkit-animation-duration: 2s;      
+   -webkit-animation-fill-mode: both; 
+   animation-name: slideInRight;
+   animation-duration: 1s;    
+   animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
