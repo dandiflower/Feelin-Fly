@@ -27,5 +27,12 @@ $.ajax({
   url: queryURL,
   method: "GET"
 }).then(function(response) {
-  console.log(response);
+  console.log(response)
+});
+
+
+//start button on.click function
+$(document).on("click", "#start-button", function(){
+    var introBox = $(".startbox");
+    introBox.attr("class", "slideout");
 });
