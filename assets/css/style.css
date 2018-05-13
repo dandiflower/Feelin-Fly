@@ -34,12 +34,20 @@ color:white;
     color: white;
 }
 
-/* this is a class that should be added when the submit button is clicked. it will slide the box to the left out of the screen */
+#reddit-prompt {
+    text-align: center;
+}
+
+#submit-button {
+    margin-left: 45%;
+}
+
+/* this is a class that should be added to the intor box when #startbutton is clicked. it will slide the intro box to the left out of the screen */
  .slideout{
      margin-left: auto;
      margin-right: auto;
     -webkit-animation-name: slideOutLeft;  
-    -webkit-animation-duration: 3s;      
+    -webkit-animation-duration: 2s;      
     -webkit-animation-fill-mode: both; 
     animation-name: slideOutLeft;
     animation-duration: 1s;    
@@ -72,5 +80,43 @@ color:white;
       transform: translate3d(-100%, 0, 0);
       -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
 
+    }
+  }
+
+  /* this is a class that should be added to the prompt box when the #submit-button is clicked. it will slide the prompt box onto the screen from the right */
+  .slidein{
+    margin-left: auto;
+    margin-right: auto;
+   -webkit-animation-name: slideInRight;  
+   -webkit-animation-duration: 2s;      
+   -webkit-animation-fill-mode: both; 
+   animation-name: slideInRight;
+   animation-duration: 1s;    
+   animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
   }

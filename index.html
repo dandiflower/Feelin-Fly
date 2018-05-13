@@ -29,24 +29,37 @@
       <p class="lead">The Random Vacationator</p>
     </div>
   </div>
+
   <!-- intro box -->
-  <div class="startbox">
+  <!-- <div class="startbox">
     <div class="card border-dark mb-3">
-      <div class="card-header">LETS GET FLY</div>
+      <div class="card-header">LET'S GET FLY</div>
       <div class="card-body text-dark">
         <h5 class="card-title">Where will the world take you next? Enter your name to get started</h5>
         <div class="input-group mb-3">
-          <input type="text" class="form-control user-name" placeholder="Your Name">
+          <input type="text" class="form-control user-name" id="user-name" placeholder="Your Name">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="start=button" type="button">Submit</button>
+            <button class="btn btn-outline-secondary" id="start-button" type="button">Start!</button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- prompt box -->
-  <div>
+  </div> -->
 
+  <!-- prompt box -->
+  <!-- how do we make a min word requirement? -->
+  <!-- how do we hide this until #start-button is clicked? -->
+  <div class="startbox slidein">
+    <div class="card border-dark mb-3">
+      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title" id="reddit-prompt">Random promt from reddit</h5>
+        <form class="input-group mb-3">
+          <input type="text" class="form-control user-name" id="user-response" placeholder="User Response" minlength="5">
+        </form>
+        <button class="btn btn-outline-secondary" id="submit-button" type="button">Submit</button>
+      </div>
+    </div>
   </div>
 
 
