@@ -25,7 +25,8 @@ font-family: 'Lobster', cursive;
 color:white;
 }
 .startbox{
-    width: 1000px;
+    width: 60%;
+    max-width: 1000px;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto
@@ -44,13 +45,15 @@ color:white;
 
 /* this is a class that should be added to the intor box when #startbutton is clicked. it will slide the intro box to the left out of the screen */
  .slideout{
-     margin-left: auto;
-     margin-right: auto;
+    width: 60%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-animation-name: slideOutLeft;  
-    -webkit-animation-duration: 2s;      
+    -webkit-animation-duration: .5s;      
     -webkit-animation-fill-mode: both; 
     animation-name: slideOutLeft;
-    animation-duration: 1s;    
+    animation-duration: .5s;    
     animation-fill-mode: both;
  }
 
