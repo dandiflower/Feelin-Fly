@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous"> -->
   <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
@@ -18,10 +17,11 @@
   </style>
 
 
+
   <title>Feelin Fly</title>
 </head>
 
-<body>
+<body class="body1">
   <!-- header -->
   <div class="jumbotron jumbotron-fluid.container-fluid">
     <div class="container">
@@ -49,13 +49,13 @@
   <!-- prompt box -->
   <!-- how do we make a min word requirement? -->
   <!-- how do we hide this until #start-button is clicked? -->
-  <div class="promptbox slidein">
+  <div class="promptbox hide">
     <div class="card border-dark mb-3">
       <div class="card-header">LET'S GET FLY</div>
       <div class="card-body text-dark">
         <h5 class="card-title" id="reddit-prompt">Random promt from reddit</h5>
         <form class="input-group mb-3">
-          <input type="text" class="form-control user-name" id="user-response" placeholder="User Response" minlength="5">
+          <input type="text" class="form-control user-name" id="user-response" placeholder="User Response" minlength="5" style="height: 300px;">
         </form>
         <button class="btn btn-outline-secondary" id="submit-button" type="button">Submit</button>
       </div>
@@ -82,15 +82,28 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
-
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+      <!-- Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAwISBzRMB9OYvEooKslnA37JQAFJbflPY",
+      authDomain: "feelin-fly.firebaseapp.com",
+      databaseURL: "https://feelin-fly.firebaseio.com",
+      projectId: "feelin-fly",
+      storageBucket: "",
+      messagingSenderId: "347513284405"
+    };
+    firebase.initializeApp(config);
+  </script>
+
   <!-- js file -->
   <script src="assets/javascript/test.js"></script>
-
 </body>
 
 </html>
