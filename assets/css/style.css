@@ -19,7 +19,7 @@ font-family: 'Lobster', cursive;
 .card-text, .card-title{
 color:white;
 }
-.startbox{
+.startbox, .promptbox{
     width: 60%;
     max-width: 1000px;
     margin-top: 10%;

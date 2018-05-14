@@ -31,8 +31,15 @@ $.ajax({
 });
 
 
-//start button on.click function
+//start button on.click function adds .slideout to .startbox
 $(document).on("click", "#start-button", function(){
     var introBox = $(".startbox");
     introBox.attr("class", "slideout");
+});
+
+//submit button on.click function adds .slideout to .promptbox
+$(document).on("click", "#submit-button", function(){
+  var promptBox = $(".promptbox");
+  promptBox.attr("class", "slideout");
+  document.location.href = "result.html";
 });
