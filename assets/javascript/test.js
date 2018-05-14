@@ -1,5 +1,17 @@
 // test test
 
+//Initialize Firebase
+var config = {
+  apiKey: "AIzaSyAwISBzRMB9OYvEooKslnA37JQAFJbflPY",
+  authDomain: "feelin-fly.firebaseapp.com",
+  databaseURL: "https://feelin-fly.firebaseio.com",
+  projectId: "feelin-fly",
+  storageBucket: "",
+  messagingSenderId: "347513284405"
+};
+firebase.initializeApp(config);
+
+
 //this function helps avoid CORS(Cross Origin) issues. set globally
 jQuery.ajaxPrefilter(function(options) {
     if (options.crossDomain && jQuery.support.cors) {
@@ -44,4 +56,18 @@ $(document).on("click", "#submit-button", function(){
   promptBox.attr("class", "slideout");
   //add a few seconds before new page shows up
   document.location.href = "result.html";
+});
+
+
+
+
+//feelinFly API
+var queryURL = "https://feelinfly.com/watson"
+
+$.ajax({
+  url: queryURL,
+  method: "POST",
+  data: {text: ""}
+}).then(function(response) {
+  console.log(response)
 });
