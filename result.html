@@ -18,7 +18,7 @@
   </style>
 
 
-  <title>Feelin Fly</title>
+  <title>Results</title>
 </head>
 
 <body>
@@ -30,45 +30,35 @@
     </div>
   </div>
 
-  <!-- intro box -->
-  <div class="startbox">
+  <!-- personalitly traits -->
+  <div class="personality-box slidein">
     <div class="card border-dark mb-3">
       <div class="card-header">LET'S GET FLY</div>
       <div class="card-body text-dark">
-        <h5 class="card-title">Where will the world take you next? Enter your name to get started</h5>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control user-name" id="user-name" placeholder="Your Name">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="start-button" type="button">Start!</button>
-          </div>
-        </div>
+        <h5 class="card-title trait">Personality trait results will go here</h5>
       </div>
     </div>
   </div>
 
-  <!-- prompt box -->
-  <!-- how do we make a min word requirement? -->
-  <!-- how do we hide this until #start-button is clicked? -->
-  <div class="promptbox slidein">
+  <!-- country matching -->
+  <div class="match-box slidein">
     <div class="card border-dark mb-3">
       <div class="card-header">LET'S GET FLY</div>
       <div class="card-body text-dark">
-        <h5 class="card-title" id="reddit-prompt">Random promt from reddit</h5>
-        <form class="input-group mb-3">
-          <input type="text" class="form-control user-name" id="user-response" placeholder="User Response" minlength="5">
-        </form>
-        <button class="btn btn-outline-secondary" id="submit-button" type="button">Submit</button>
+        <h5 class="card-title match">Country matches will go here</h5>
       </div>
     </div>
   </div>
 
-
-
-
-
-
-
-
+<!-- about the country -->
+<div class="info-box slidein">
+    <div class="card border-dark mb-3">
+      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title info">Info on the country will go here</h5>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -81,9 +71,6 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
     crossorigin="anonymous"></script>
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

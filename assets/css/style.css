@@ -11,32 +11,30 @@ background-color: rgba(0, 0, 0, .7);
 color: white;
 font-family: 'Lobster', cursive;
 }
-.card-header{
+.card-header, .card{
     background-color:rgba(0, 0, 0, 0.7);
     color:white;
     }
 
-.card {
-    background-color:rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
-.card-text{
+.card-text, .card-title{
 color:white;
 }
-.startbox{
+.startbox, .promptbox{
     width: 60%;
     max-width: 1000px;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto
 }
+<<<<<<< HEAD
 .card-title{
     color: white;
 }
 .btn {
     color:white;
 }
+=======
+>>>>>>> 7c3f1392fc7ea915195c18e29854ebcdc33dd6c7
 
 #reddit-prompt {
     text-align: center;
@@ -52,14 +50,22 @@ color:white;
 /* this is a class that should be added to the intor box when #startbutton is clicked. it will slide the intro box to the left out of the screen */
  .slideout{
     width: 60%;
+    max-width: 1000px;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     -webkit-animation-name: slideOutLeft;  
+<<<<<<< HEAD
     -webkit-animation-duration: .2s;      
     -webkit-animation-fill-mode: both; 
     animation-name: slideOutLeft;
     animation-duration: .2s;    
+=======
+    -webkit-animation-duration: 2s;      
+    -webkit-animation-fill-mode: both; 
+    animation-name: slideOutLeft;
+    animation-duration: 2s;    
+>>>>>>> 7c3f1392fc7ea915195c18e29854ebcdc33dd6c7
     animation-fill-mode: both;
  }
 
@@ -71,8 +77,8 @@ color:white;
   
     to {
       visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      -webkit-transform: translate3d(-150%, 0, 0);
+      transform: translate3d(-150%, 0, 0);
       -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
     }
   }
@@ -85,8 +91,8 @@ color:white;
   
     to {
       visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      -webkit-transform: translate3d(-150%, 0, 0);
+      transform: translate3d(-150%, 0, 0);
       -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
 
     }
@@ -100,14 +106,14 @@ color:white;
    -webkit-animation-duration: 2s;      
    -webkit-animation-fill-mode: both; 
    animation-name: slideInRight;
-   animation-duration: 1s;    
+   animation-duration: 2s;    
    animation-fill-mode: both;
   }
 
   @-webkit-keyframes slideInRight {
     from {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
+      -webkit-transform: translate3d(150%, 0, 0);
+      transform: translate3d(150%, 0, 0);
       visibility: visible;
     }
   
@@ -119,8 +125,8 @@ color:white;
   
   @keyframes slideInRight {
     from {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
+      -webkit-transform: translate3d(150%, 0, 0);
+      transform: translate3d(150%, 0, 0);
       visibility: visible;
     }
   
@@ -128,4 +134,20 @@ color:white;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
+<<<<<<< HEAD
   
+=======
+  }
+
+  .personality-box, .match-box, .info-box {
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-box {
+  padding-bottom: 200px;
+}
+>>>>>>> 7c3f1392fc7ea915195c18e29854ebcdc33dd6c7
