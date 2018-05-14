@@ -30,7 +30,9 @@ $(document).ready(function () {
   }).then(function (response) {
     var i = Math.floor((Math.random() * 26));
     var randomPrompt = $("#reddit-prompt");
-    randomPrompt.text(response.data.children[i].data.title);
+    var prompt = response.data.children[i].data.title;
+    var cutPrompt = prompt.slice(4);
+    randomPrompt.text(cutPrompt);
   });
 
   //generates flag of country using wiki API
