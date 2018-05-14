@@ -15,8 +15,8 @@ $.ajax({
   method: "GET"
 }).then(function(response) {
   var i = Math.floor((Math.random()*26));
-  console.log(i);
-  console.log(response.data.children[i].data.title);
+  var randomPrompt = $("#reddit-prompt");
+  randomPrompt.text(response.data.children[i].data.title);
 });
 
 //generates flag of country using wiki API
