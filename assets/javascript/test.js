@@ -41,7 +41,7 @@ $(document).ready(function () {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    console.log(response)
+    console.log("this is the wiki response" + response)
   });
 
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
       introBox.addClass("hide");
       var promptbox = $(".promptbox");
       promptbox.removeClass("hide");
-      promptbox.attr("class", "slidein");
+      promptbox.addClass("slidein");
     }, 2200);
 
 
@@ -70,9 +70,16 @@ $(document).ready(function () {
   //submit button on.click function
   $(document).on("click", "#submit-button", function () {
     var promptBox = $(".promptbox");
-    promptBox.attr("class", "slideout");
-    //add a few seconds before new page shows up
-    document.location.href = "result.html";
+    promptBox.removeClass("slidein").attr("class", "slideout");
+    var timeOut = setTimeout(function () {
+      promptBox.addClass("hide");
+      var personBox = $(".personality-box");
+      var matchBox = $(".match-box");
+      var numberBox = $(".info-box");
+      personBox.removeClass("hide").attr("class", "slidein");
+      matchBox.removeClass("hide").attr("class", "slidein");
+      numberBox.removeClass("hide").attr("class", "slidein");
+    }, 2200);
   });
 
 
