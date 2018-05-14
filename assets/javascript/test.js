@@ -8,6 +8,7 @@ jQuery.ajaxPrefilter(function(options) {
 });
 
 //random prompt generator using reddit API
+//how to get rid of [WP] for each prompt printed
 var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
 
 $.ajax({
@@ -41,5 +42,6 @@ $(document).on("click", "#start-button", function(){
 $(document).on("click", "#submit-button", function(){
   var promptBox = $(".promptbox");
   promptBox.attr("class", "slideout");
+  //add a few seconds before new page shows up
   document.location.href = "result.html";
 });

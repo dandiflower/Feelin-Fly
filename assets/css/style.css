@@ -58,8 +58,8 @@ color:white;
   
     to {
       visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      -webkit-transform: translate3d(-150%, 0, 0);
+      transform: translate3d(-150%, 0, 0);
       -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
     }
   }
@@ -72,8 +72,8 @@ color:white;
   
     to {
       visibility: hidden;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      -webkit-transform: translate3d(-150%, 0, 0);
+      transform: translate3d(-150%, 0, 0);
       -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
 
     }
@@ -87,14 +87,14 @@ color:white;
    -webkit-animation-duration: 2s;      
    -webkit-animation-fill-mode: both; 
    animation-name: slideInRight;
-   animation-duration: 1s;    
+   animation-duration: 2s;    
    animation-fill-mode: both;
   }
 
   @-webkit-keyframes slideInRight {
     from {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
+      -webkit-transform: translate3d(150%, 0, 0);
+      transform: translate3d(150%, 0, 0);
       visibility: visible;
     }
   
@@ -106,8 +106,8 @@ color:white;
   
   @keyframes slideInRight {
     from {
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
+      -webkit-transform: translate3d(150%, 0, 0);
+      transform: translate3d(150%, 0, 0);
       visibility: visible;
     }
   
@@ -123,4 +123,8 @@ color:white;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.info-box {
+  padding-bottom: 200px;
 }
