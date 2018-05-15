@@ -45,10 +45,9 @@ $(document).ready(function () {
     var introBox = $(".startbox");
     //getting user name and saving on Firebase
     var userName = $(".user-name").val();
-    console.log("This is the input: " + userName);
-    var peopleInputs = {};
-    peopleInputs["name"] = userName;
-    database.ref().push(peopleInputs);
+    if (userName.length<1){
+      prompt("Please type your name")
+  }else {
     //adding slideout to introbox
     introBox.addClass("slideout");
     //wait 2.2 seconds then bring on next box
@@ -58,10 +57,15 @@ $(document).ready(function () {
       promptbox.removeClass("hide");
       promptbox.addClass("slidein");
     }, 600);
+  }
   });
 
   //submit button on.click function
   $(document).on("click", "#submit-button", function () {
+    var input = $(".response").val();
+    if (input.length<100){
+      prompt("Please type in at least 100 words")
+  }else {
     var promptBox = $(".promptbox");
     promptBox.removeClass("slidein").attr("class", "slideout");
     var timeOut = setTimeout(function () {
@@ -74,7 +78,8 @@ $(document).ready(function () {
       matchBox.removeClass("hide").addClass("slidein");
       numberBox.removeClass("hide").addClass("slidein");
       redoBox.removeClass("hide").addClass("slidein");
-    }, 600);
+    }, 600)
+  }
   });
 
 
