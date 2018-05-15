@@ -46,7 +46,8 @@ $(document).ready(function () {
     //getting user name and saving on Firebase
     var userName = $(".user-name").val();
     if (userName.length<1){
-      prompt("Please type your name")
+      var needName = $(".no-name");
+      needName.text("Please enter your name");
   }else {
     //adding slideout to introbox
     introBox.addClass("slideout");
@@ -62,9 +63,12 @@ $(document).ready(function () {
 
   //submit button on.click function
   $(document).on("click", "#submit-button", function () {
-    var input = $(".response").val();
-    if (input.length<100){
-      prompt("Please type in at least 100 words")
+    var input = $(".response");
+
+    console.log(strLength);
+    if (input<5){
+      var needPrompt = $(".prompt-error");
+      needPrompt.text("Please write at least 100 words");
   }else {
     var promptBox = $(".promptbox");
     promptBox.removeClass("slidein").attr("class", "slideout");
