@@ -1,39 +1,66 @@
-  //feelinFly API
-  // var queryURL = "https://feelinfly.com/watson"
 
-  // $.ajax({
-  //   url: queryURL,
-  //   method: "POST",
-  //   data: {text: ""}
-  // }).then(function(response) {
-  //   console.log(response)
-  // });
 
 
 $(document).on("click", "#submit-button", function () {
   // console.log($("#watsonText").val());
   $.ajax({
-      url: "https://shielded-castle-57250.herokuapp.com/watson",
+      url: "https://shielded-castle-57250.herokuapp.com/suggestions",
       type: "POST",
       data: {text : $("#watsonText").val()},
       success: function(response){
 
-        $.ajax({
-          url: "https://shielded-castle-57250.herohuapp.com/countries",
-          type: "POST",
-          data: response,
-          success: function(results){
-            console.log(results);
-
-          }
-
-        });
         console.log(response);
 
-      
-      }
-    });
+       var countries = response['countries'];
+       for (var i = 0; i < countries.length; i++) {
+         var name = countries[i][0];
+         var description = countries[i][2];
+         var flag = countries[i][3];
+
+          $("#countryResult").append($("<img class='flag'>").attr("src", flag));
+          $("#countryStuff").append($("<span class='places'>").text(name + " : " + description));
+
+
+       }
+       var watson = response['watson']['personality'];
+       for (var i = 0; i < watson.length; i++) {
+         var trait = watson[i]['name'];
+         var score = watson[i]['percentile'];
+
+         $("#watsonResponse").append($("<div class='watson'>").text(trait + " : " + score));
+       }
+    }
   });
+});
+
+
+
+
+       // JSON.stringify(watsonData)
+ 
+
+
+
+    //     console.log(response);
+    //     countryCall();
+
+      
+    //   }
+    // var countryCall = function() {
+    //   $.ajax({
+    //       url: "https://shielded-castle-57250.herohuapp.com/countries",
+    //       type: "POST",
+    //       data: {
+    //         text: "poop"
+    //       },
+    //       success: function (results) {
+    //         console.log(results);
+    //       }
+
+    //   });
+    // }
+
+
 
 
       // var sorted = false;
