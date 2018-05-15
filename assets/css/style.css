@@ -33,6 +33,10 @@ body{
     margin-right: auto
 }
 
+textarea {
+  margin-bottom: 20px;
+}
+
 #reddit-prompt {
     text-align: center;
 }
@@ -134,7 +138,7 @@ body{
     margin-right: auto;
 }
 
-.info-box, .startbox {
+.redo-box, .startbox, .promptbox {
   padding-bottom: 200px;
 }
 

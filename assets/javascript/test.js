@@ -35,6 +35,11 @@ $(document).ready(function () {
   //   randomPrompt.text(cutPrompt);
   // });
 
+
+//difference between addClass and attr
+    //addClass: adds additional class on top of any pre existing classes
+    //attr: clears all previous classes, adds new class
+
   //start button on.click function
   $(document).on("click", "#start-button", function () {
     var introBox = $(".startbox");
@@ -45,7 +50,7 @@ $(document).ready(function () {
     peopleInputs["name"] = userName;
     database.ref().push(peopleInputs);
     //adding slideout to introbox
-    introBox.attr("class", "slideout");
+    introBox.addClass("slideout");
     //wait 2.2 seconds then bring on next box
     var timeOut = setTimeout(function () {
       introBox.addClass("hide");
@@ -64,9 +69,11 @@ $(document).ready(function () {
       var personBox = $(".personality-box");
       var matchBox = $(".match-box");
       var numberBox = $(".info-box");
-      personBox.removeClass("hide").attr("class", "slidein");
-      matchBox.removeClass("hide").attr("class", "slidein");
-      numberBox.removeClass("hide").attr("class", "slidein");
+      var redoBox = $(".redo-box");
+      personBox.removeClass("hide").addClass("slidein");
+      matchBox.removeClass("hide").addClass("slidein");
+      numberBox.removeClass("hide").addClass("slidein");
+      redoBox.removeClass("hide").addClass("slidein");
     }, 600);
   });
 
