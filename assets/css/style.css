@@ -33,6 +33,12 @@ body{
     margin-right: auto
 }
 
+.no-name, .prompt-error {
+  color: red;
+  padding-left: 25px;
+  padding-bottom: 25px;
+}
+
 textarea {
   margin-bottom: 20px;
 }
