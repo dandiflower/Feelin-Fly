@@ -58,9 +58,9 @@ textarea {
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-    -webkit-animation-name: slideOutLeft;  
-    -webkit-animation-duration: 1s;      
-    -webkit-animation-fill-mode: both; 
+    -webkit-animation-name: slideOutLeft;  /* Chrome 16+, Safari 4+ */
+    -webkit-animation-duration: 1s;      /* Chrome 16+, Safari 4+ */
+    -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
     animation-name: slideOutLeft;
     animation-duration: 1s;    
     animation-fill-mode: both;
@@ -102,9 +102,9 @@ textarea {
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
-   -webkit-animation-name: slideInRight;  
-   -webkit-animation-duration: 1s;      
-   -webkit-animation-fill-mode: both; 
+   -webkit-animation-name: slideInRight;  /* Chrome 16+, Safari 4+ */
+   -webkit-animation-duration: 1s;      /* Chrome 16+, Safari 4+ */
+   -webkit-animation-fill-mode: both; /* Chrome 16+, Safari 4+ */
    animation-name: slideInRight;
    animation-duration: 1s;    
    animation-fill-mode: both;
@@ -157,7 +157,6 @@ textarea {
     Helvetica,
     sans-serif;
     font-size: 10px;
-
 }
 
 .watson {
