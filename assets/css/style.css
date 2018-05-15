@@ -1,20 +1,30 @@
+body{
+  background-image: url("../images/sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-attachment: fixed;
+  background-color: #bbeff7;
+}
+
 .btn {
   color: white;
 }
 
 .jumbotron {
-background-color: rgba(0, 0, 0, .7);
-color: white;
-font-family: 'Lobster', cursive;
+  background-color: rgba(0, 0, 0, .7);
+  color: white;
+  font-family: 'Lobster', cursive;
 }
 .card-header, .card{
-    background-color:rgba(0, 0, 0, 0.7);
-    color:white;
-    }
+  background-color:rgba(0, 0, 0, 0.7);
+  color:white;
+}
 
 .card-text, .card-title{
-color:white;
+  color:white;
 }
+
 .startbox, .promptbox{
     width: 60%;
     max-width: 1000px;
@@ -31,7 +41,7 @@ color:white;
     margin-left: 45%;
 }
 
-/* this is a class that should be added to the intor box when #startbutton is clicked. it will slide the intro box to the left out of the screen */
+/* slide out animation */
  .slideout{
     width: 60%;
     max-width: 1000px;
@@ -75,7 +85,7 @@ color:white;
     }
   }
 
-  /* this is a class that should be added to the prompt box when the #submit-button is clicked. it will slide the prompt box onto the screen from the right */
+  /* slide in animation */
   .slidein{
     width: 60%;
     max-width: 1000px;
@@ -116,7 +126,7 @@ color:white;
     }
   }
 
-  .personality-box, .match-box, .info-box {
+.personality-box, .match-box, .info-box {
     width: 80%;
     max-width: 1000px;
     margin-top: 10%;
