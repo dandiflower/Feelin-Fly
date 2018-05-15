@@ -7,15 +7,6 @@
     background-color: #bbeff7;
 }
 
-.body2{
-  background-image: url("../images/2ndpage.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 0%;
-  background-attachment: fixed;
-  background-color: #bbeff7;
-}
-
 .btn {
   color: white;
 }
@@ -57,10 +48,10 @@ color:white;
     margin-left: auto;
     margin-right: auto;
     -webkit-animation-name: slideOutLeft;  
-    -webkit-animation-duration: 2s;      
+    -webkit-animation-duration: 1s;      
     -webkit-animation-fill-mode: both; 
     animation-name: slideOutLeft;
-    animation-duration: 2s;    
+    animation-duration: 1s;    
     animation-fill-mode: both;
  }
 
@@ -101,10 +92,10 @@ color:white;
     margin-left: auto;
     margin-right: auto;
    -webkit-animation-name: slideInRight;  
-   -webkit-animation-duration: 2s;      
+   -webkit-animation-duration: 1s;      
    -webkit-animation-fill-mode: both; 
    animation-name: slideInRight;
-   animation-duration: 2s;    
+   animation-duration: 1s;    
    animation-fill-mode: both;
   }
 

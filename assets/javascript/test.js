@@ -22,30 +22,18 @@ $(document).ready(function () {
 
   //random prompt generator using reddit API
   //how to get rid of [WP] for each prompt printed
-  var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
+  // var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    var i = Math.floor((Math.random() * 26));
-    var randomPrompt = $("#reddit-prompt");
-    var prompt = response.data.children[i].data.title;
-    var cutPrompt = prompt.slice(4);
-    randomPrompt.text(cutPrompt);
-  });
-
-  //generates flag of country using wiki API
-  var country = "";
-  var queryURL = "https://en.wikipedia.org/w/api.php?action=query&prop=images&titles=" + country + "&format=json";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    console.log("this is the wiki response" + response)
-  });
-
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function (response) {
+  //   var i = Math.floor((Math.random() * 26));
+  //   var randomPrompt = $("#reddit-prompt");
+  //   var prompt = response.data.children[i].data.title;
+  //   var cutPrompt = prompt.slice(4);
+  //   randomPrompt.text(cutPrompt);
+  // });
 
   //start button on.click function
   $(document).on("click", "#start-button", function () {
@@ -64,9 +52,7 @@ $(document).ready(function () {
       var promptbox = $(".promptbox");
       promptbox.removeClass("hide");
       promptbox.addClass("slidein");
-    }, 2200);
-
-
+    }, 600);
   });
 
   //submit button on.click function
@@ -81,7 +67,7 @@ $(document).ready(function () {
       personBox.removeClass("hide").attr("class", "slidein");
       matchBox.removeClass("hide").attr("class", "slidein");
       numberBox.removeClass("hide").attr("class", "slidein");
-    }, 2200);
+    }, 600);
   });
 
 
