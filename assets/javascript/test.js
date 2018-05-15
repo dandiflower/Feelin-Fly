@@ -22,28 +22,18 @@ $(document).ready(function () {
 
   //random prompt generator using reddit API
   //how to get rid of [WP] for each prompt printed
-  var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
+  // var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    var i = Math.floor((Math.random() * 26));
-    var randomPrompt = $("#reddit-prompt");
-    randomPrompt.text(response.data.children[i].data.title);
-  });
-
-  //generates flag of country using wiki API
-  var country = "";
-  var queryURL = "https://en.wikipedia.org/w/api.php?action=query&prop=images&titles=" + country + "&format=json";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    console.log(response)
-  });
-
+  // $.ajax({
+  //   url: queryURL,
+  //   method: "GET"
+  // }).then(function (response) {
+  //   var i = Math.floor((Math.random() * 26));
+  //   var randomPrompt = $("#reddit-prompt");
+  //   var prompt = response.data.children[i].data.title;
+  //   var cutPrompt = prompt.slice(4);
+  //   randomPrompt.text(cutPrompt);
+  // });
 
   //start button on.click function
   $(document).on("click", "#start-button", function () {
@@ -61,18 +51,23 @@ $(document).ready(function () {
       introBox.addClass("hide");
       var promptbox = $(".promptbox");
       promptbox.removeClass("hide");
-      promptbox.attr("class", "slidein");
-    }, 2200);
-
-
+      promptbox.addClass("slidein");
+    }, 600);
   });
 
   //submit button on.click function
   $(document).on("click", "#submit-button", function () {
     var promptBox = $(".promptbox");
-    promptBox.attr("class", "slideout");
-    //add a few seconds before new page shows up
-    document.location.href = "result.html";
+    promptBox.removeClass("slidein").attr("class", "slideout");
+    var timeOut = setTimeout(function () {
+      promptBox.addClass("hide");
+      var personBox = $(".personality-box");
+      var matchBox = $(".match-box");
+      var numberBox = $(".info-box");
+      personBox.removeClass("hide").attr("class", "slidein");
+      matchBox.removeClass("hide").attr("class", "slidein");
+      numberBox.removeClass("hide").attr("class", "slidein");
+    }, 600);
   });
 
 
