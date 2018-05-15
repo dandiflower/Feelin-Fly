@@ -17,8 +17,10 @@ $(document).on("click", "#submit-button", function () {
          var description = countries[i][2];
          var flag = countries[i][3];
 
+
           $("#countryResult").append($("<img class='flag'>").attr("src", flag));
           $("#countryStuff").append($("<span class='places'>").text(name + " : " + description));
+          $("#countryResult").append($("<div class='whereAmi'>").text(name));
 
 
        }
