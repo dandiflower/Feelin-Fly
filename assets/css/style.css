@@ -147,13 +147,19 @@ textarea {
 }
 
 .places {
-  
+    font-family: Arial,
+    Helvetica,
+    sans-serif;
+    font-size: 10px;
+
 }
 
 .watson {
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
 }
 
 .flag {
+  width: 200px;
 
 }
