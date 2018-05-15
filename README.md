@@ -1,6 +1,6 @@
-###Feelin Fly
+### Feelin Fly
 
-Feelin Fly 
+Feelin Fly?
 
 ## Getting Started
 
@@ -33,8 +33,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* shout out to feelin fly API
+* Shout out to feelin fly API
 * Berkeley coding bootcamp
 
