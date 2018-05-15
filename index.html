@@ -47,23 +47,40 @@
   </div>
 
   <!-- prompt box -->
+  <!-- min word count of 100 doesn't work -->
   <div class="promptbox hide">
     <div class="card border-dark mb-3">
-      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-header">WRITE SOMETHING FOR US</div>
       <div class="card-body text-dark">
         <h5 class="card-title" id="reddit-prompt">Random promt from reddit</h5>
+
         <form class="input-group mb-3">
         <input type="text" id="watsonText" class="form-control user-name" id="user-response" placeholder="User Response" minlength="5">
         </form>
+
+        <div class="input-group">
+          <div class="input-group-prepend" type="text" min="100">
+          </div>
+        </div>
+        <textarea class="form-control" aria-label="With textarea" placeholder="User Response"></textarea>
+
         <button class="btn btn-outline-secondary" id="submit-button" type="button">Submit</button>
       </div>
     </div>
   </div>
 
+
+
+
+
+
+
+
+
   <!-- personality traits -->
   <div class="personality-box hide">
     <div class="card border-dark mb-3">
-      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-header">YOUR TRAITS</div>
       <div class="card-body text-dark">
         <h5 class="card-title trait">Personality trait results will go here</h5>
       </div>
@@ -73,28 +90,33 @@
   <!-- country matching -->
   <div class="match-box hide">
     <div class="card border-dark mb-3">
-      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-header">YOUR MATCHES</div>
       <div class="card-body text-dark">
         <h5 class="card-title match">Country matches will go here</h5>
       </div>
     </div>
   </div>
 
-<!-- about the country -->
-<div class="info-box hide">
+  <!-- about the country -->
+  <div class="info-box hide">
     <div class="card border-dark mb-3">
-      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-header">MOST POPULAR!</div>
       <div class="card-body text-dark">
-        <h5 class="card-title info">Info on the country will go here</h5>
+        <h5 class="card-title info">Info on most matched countries</h5>
       </div>
     </div>
   </div>
 
 
-
-
-
-
+  <!-- redo box -->
+  <div class="redo-box hide">
+    <div class="card border-dark mb-3">
+      <div class="card-header">WANNA GO AGAIN?</div>
+      <div class="card-body text-dark">
+        <button class="btn btn-outline-secondary" id="submit-button" type="button">Retry!</button>
+      </div>
+    </div>
+  </div>
 
 
 
