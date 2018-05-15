@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous"> -->
   <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Lobster');
   </style>
+
 
 
   <title>Feelin Fly</title>
@@ -37,7 +37,7 @@
       <div class="card-body text-dark">
         <h5 class="card-title">Where will the world take you next? Enter your name to get started</h5>
         <div class="input-group mb-3">
-          <input type="text" class="form-control user-name" id="user-name" placeholder="Your Name">
+          <input type="text" class="form-control user-name" placeholder="Your Name">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" id="start-button" type="button">Start!</button>
           </div>
@@ -47,9 +47,7 @@
   </div>
 
   <!-- prompt box -->
-  <!-- how do we make a min word requirement? -->
-  <!-- how do we hide this until #start-button is clicked? -->
-  <!-- <div class="startbox slidein">
+  <div class="promptbox hide">
     <div class="card border-dark mb-3">
       <div class="card-header">LET'S GET FLY</div>
       <div class="card-body text-dark">
@@ -60,8 +58,37 @@
         <button class="btn btn-outline-secondary" id="submit-button" type="button">Submit</button>
       </div>
     </div>
-  </div> -->
+  </div>
 
+  <!-- personality traits -->
+  <div class="personality-box hide">
+    <div class="card border-dark mb-3">
+      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title trait">Personality trait results will go here</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- country matching -->
+  <div class="match-box hide">
+    <div class="card border-dark mb-3">
+      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title match">Country matches will go here</h5>
+      </div>
+    </div>
+  </div>
+
+<!-- about the country -->
+<div class="info-box hide">
+    <div class="card border-dark mb-3">
+      <div class="card-header">LET'S GET FLY</div>
+      <div class="card-body text-dark">
+        <h5 class="card-title info">Info on the country will go here</h5>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -85,9 +112,15 @@
   <!-- jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
   <!-- js file -->
   <script src="assets/javascript/test.js"></script>
-
+  <script src="assets/javascript/reddit.js"></script>
+  <!-- <script src="assets/javascript/feelin-fly.js"></script>
+  <script src="assets/javascript/form-control.js"></script>
+  <script src="assets/javascript/wiki.js"></script> -->
 </body>
 
 </html>
