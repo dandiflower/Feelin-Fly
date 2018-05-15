@@ -63,12 +63,10 @@ $(document).ready(function () {
 
   //submit button on.click function
   $(document).on("click", "#submit-button", function () {
-    var input = $(".response");
-
-    console.log(strLength);
-    if (input<5){
+    var input = $(".response").val().split(" ").length;
+    if (input<100){
       var needPrompt = $(".prompt-error");
-      needPrompt.text("Please write at least 100 words");
+      needPrompt.text("Please write at least 100 words. So far you've written " + input + " words");
   }else {
     var promptBox = $(".promptbox");
     promptBox.removeClass("slidein").attr("class", "slideout");
