@@ -20,8 +20,9 @@ $(document).ready(function () {
     }
   });
 
-  //random prompt generator using reddit API
-  var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
+  //random prompt generator function using reddit API
+  function redditPrompt() {
+    var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
 
   $.ajax({
     url: queryURL,
@@ -33,6 +34,8 @@ $(document).ready(function () {
     var cutPrompt = prompt.slice(4);
     randomPrompt.text(cutPrompt);
   });
+  }
+redditPrompt();
 
 
   //difference between addClass and attr
@@ -101,6 +104,7 @@ $(document).on("click", "#restart-button", function(){
   $("#watsonResponse").empty();
   $("#countryResult").empty();
   $("#countryStuff").empty();
+  redditPrompt();
 });
 
 })
