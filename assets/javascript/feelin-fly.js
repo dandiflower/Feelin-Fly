@@ -14,6 +14,7 @@ $(document).on("click", "#submit-button", function () {
 
           $("#countryResult").append($("<img class='flag'>").attr("src", flag));
           $("#countryStuff").append($("<span class='places'>").text(name + " : " + description));
+          $("#countryStuff").append($("<div><br>").text('                    :                  '));
           $("#countryResult").append($("<div>").text(name));
 
           
@@ -24,6 +25,8 @@ $(document).on("click", "#submit-button", function () {
          var score = watson[i]['percentile'];
 
          $("#watsonResponse").append($("<div class='watson'>").text(trait + " : " + score));
+
+         
        }
     }
   });
