@@ -86,6 +86,7 @@ redditPrompt();
     }
   });
 
+
 //restart button
 $(document).on("click", "#restart-button", function(){
   var personality = $(".personality-box").addClass("slideout");
@@ -106,5 +107,7 @@ $(document).on("click", "#restart-button", function(){
   $("#countryStuff").empty();
   redditPrompt();
 });
+
+
 
 })

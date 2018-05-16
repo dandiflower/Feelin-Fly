@@ -14,9 +14,10 @@ $(document).on("click", "#submit-button", function () {
 
           $("#countryResult").append($("<img class='flag'>").attr("src", flag));
           $("#countryStuff").append($("<span class='places'>").text(name + " : " + description));
-          $("#countryResult").append($("<div class='whereAmi'>").text(name));
+          $("#countryStuff").append($("<div><br>").text('                    :                  '));
+          $("#countryResult").append($("<div>").text(name));
 
-
+          
        }
        var watson = response['watson']['personality'];
        for (var i = 0; i < watson.length; i++) {
@@ -24,6 +25,8 @@ $(document).on("click", "#submit-button", function () {
          var score = watson[i]['percentile'];
 
          $("#watsonResponse").append($("<div class='watson'>").text(trait + " : " + score));
+
+         
        }
     }
   });
