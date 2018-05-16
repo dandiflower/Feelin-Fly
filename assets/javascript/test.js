@@ -68,7 +68,7 @@ $(document).ready(function () {
       needPrompt.text("Please write at least 100 words. So far you've written " + input + " words");
     } else {
       var promptBox = $(".promptbox");
-      promptBox.removeClass("slidein").attr("class", "slideout");
+      promptBox.removeClass("slidein").addClass("class", "slideout");
       var timeOut = setTimeout(function () {
         promptBox.addClass("hide");
         var personBox = $(".personality-box");
@@ -82,4 +82,21 @@ $(document).ready(function () {
       }, 600)
     }
   });
+
+//restart button
+$(document).on("click", "#restart-button", function(){
+  var personality = $(".personality-box").addClass("slideout");
+  var country = $(".match-box").addClass("slideout");
+  var info = $(".info-box").addClass("slideout");
+  var redo = $(".redo-box").addClass("slideout");
+  var timeOut = setTimeout(function () {
+    personality.addClass("hide");
+    country.addClass("hide");
+    info.addClass("hide");
+    redo.addClass("hide");
+  $(".startbox").removeClass("hide").addClass("slidein");
+  }, 600)
+
+});
+
 })
