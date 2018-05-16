@@ -94,9 +94,13 @@ $(document).on("click", "#restart-button", function(){
     country.addClass("hide");
     info.addClass("hide");
     redo.addClass("hide");
+  $(".user-name").val(" ");
   $(".startbox").removeClass("hide").addClass("slidein");
   }, 600)
-
+  $(".response").val(" ");
+  $("#watsonResponse").empty();
+  $("#countryResult").empty();
+  $("#countryStuff").empty();
 });
 
 })
