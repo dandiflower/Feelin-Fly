@@ -14,9 +14,9 @@ $(document).on("click", "#submit-button", function () {
 
           $("#countryResult").append($("<img class='flag'>").attr("src", flag));
           $("#countryStuff").append($("<span class='places'>").text(name + " : " + description));
-          $("#countryResult").append($("<div class='whereAmi'>").text(name));
+          $("#countryResult").append($("<div>").text(name));
 
-
+          
        }
        var watson = response['watson']['personality'];
        for (var i = 0; i < watson.length; i++) {
