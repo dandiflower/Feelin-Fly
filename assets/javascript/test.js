@@ -20,8 +20,9 @@ $(document).ready(function () {
     }
   });
 
-  //random prompt generator using reddit API
-  var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
+  //random prompt generator function using reddit API
+  function redditPrompt() {
+    var queryURL = "https://www.reddit.com/r/WritingPrompts/new.json?limit=100";
 
   $.ajax({
     url: queryURL,
@@ -33,6 +34,8 @@ $(document).ready(function () {
     var cutPrompt = prompt.slice(4);
     randomPrompt.text(cutPrompt);
   });
+  }
+redditPrompt();
 
 
   //difference between addClass and attr
@@ -68,7 +71,7 @@ $(document).ready(function () {
       needPrompt.text("Please write at least 100 words. So far you've written " + input + " words");
     } else {
       var promptBox = $(".promptbox");
-      promptBox.removeClass("slidein").attr("class", "slideout");
+      promptBox.removeClass("slidein").addClass("class", "slideout");
       var timeOut = setTimeout(function () {
         promptBox.addClass("hide");
         var personBox = $(".personality-box");
@@ -83,20 +86,28 @@ $(document).ready(function () {
     }
   });
 
-  //pie
-  var ctxP = document.getElementById("pieChart").getContext('2d');
-  var myPieChart = new Chart(ctxP, {
-    type: 'pie',
-    data: {
-      labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-      datasets: [{
-        data: [300, 50, 100, 40, 120],
-        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-      }]
-    },
-    options: {
-      responsive: true
-    }
-  });
+
+//restart button
+$(document).on("click", "#restart-button", function(){
+  var personality = $(".personality-box").addClass("slideout");
+  var country = $(".match-box").addClass("slideout");
+  var info = $(".info-box").addClass("slideout");
+  var redo = $(".redo-box").addClass("slideout");
+  var timeOut = setTimeout(function () {
+    personality.addClass("hide");
+    country.addClass("hide");
+    info.addClass("hide");
+    redo.addClass("hide");
+  $(".user-name").val(" ");
+  $(".startbox").removeClass("hide").addClass("slidein");
+  }, 600)
+  $(".response").val(" ");
+  $("#watsonResponse").empty();
+  $("#countryResult").empty();
+  $("#countryStuff").empty();
+  redditPrompt();
+});
+
+
+
 })
